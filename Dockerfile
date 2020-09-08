@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+FROM nvidia/cuda:10.1-base-ubuntu18.04
 ENV TERM xterm-256color
 ARG e1=env_lmq
 ARG e2=env_nhtl
