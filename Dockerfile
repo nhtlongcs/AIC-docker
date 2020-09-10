@@ -16,6 +16,7 @@ RUN curl -sLO https://raw.githubusercontent.com/hcmus18120134/AIC-docker/master/
 RUN curl -sLO https://raw.githubusercontent.com/hcmus18120134/AIC-docker/master/$e2/requirements.txt &&\
     virtualenv --system-site-packages ~/$e2 &&\
     ~/$e2/bin/pip install --no-cache-dir -r requirements.txt &&\
+    ~/$e2/bin/pip install --no-cache-dir tqdm &&\
     rm -rf requirements.txt /var/lib/apt/lists/*
 
 RUN echo "alias $e1='source ~/$e1/bin/activate'" >> ~/.bashrc &&\
