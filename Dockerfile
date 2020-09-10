@@ -2,7 +2,7 @@ FROM nvidia/cuda:10.1-base-ubuntu18.04
 ENV TERM xterm-256color
 ARG e1=env_lmq
 ARG e2=env_nhtl
-RUN apt-get -qq update && apt-get -y --no-install-recommends install python3 python3-distutils curl bash-completion libgtk2.0-dev &&\
+RUN apt-get -qq update && apt-get -y --no-install-recommends install python3 python3-distutils curl bash-completion libgtk2.0-dev libgl1-mesa-glx &&\
     curl -sLO https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py &&\
     pip3 install --no-cache-dir -U virtualenv &&\
     rm -rf get-pip.py /var/lib/apt/lists/*
